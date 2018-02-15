@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var doodleLable: UILabel!
     //end of example variable
     
-    //model that should be broken out
+    //model that should be broken out but it still is becuase they are global variables which aren't drilled down into the scope of any specific function
     let questions: [String] = ["From what is cognac made?", "What is 7+7?", "What is the capital of Georgia?"]
     let answers: [String] = ["Grapes", "14", "Atlanta"]
     var currentQuestionIndex: Int = 0
@@ -56,6 +56,11 @@ class ViewController: UIViewController {
         
     }
     //end of example function
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        questionLabel.text = questions[currentQuestionIndex]
+    }
     
     
     

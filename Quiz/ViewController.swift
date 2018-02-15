@@ -27,6 +27,9 @@ class ViewController: UIViewController {
     //IBAction functions that got connected through interface builder
     @IBAction func showAnswer(sender: AnyObject) {
         
+        let answer: String = answers[currentQuestionIndex]
+        answerLabel.text = answer
+        
     }
     
     @IBAction func showNextQuestion(sender: AnyObject) {
